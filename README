@@ -1,0 +1,24 @@
+Module supposed to work as a wrapper for dconf.
+For the moment only implements read/list
+but should in the future implement all the 
+functionality provided by the dconf binary,
+by that I mean the following:
+
+% dconf help
+
+Usage:
+  dconf COMMAND [ARGS...]
+
+Commands:
+  help              Show this information
+  read              Read the value of a key
+  list              List the contents of a dir
+  write             Change the value of a key
+  reset             Reset the value of a key or dir
+  update            Update the system databases
+  watch             Watch a path for changes
+
+Use 'dconf help COMMAND' to get detailed help.
+
+Does require however dconf installed, of course, and
+it's headers.
