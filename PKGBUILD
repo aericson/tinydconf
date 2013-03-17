@@ -13,11 +13,11 @@ provides=()
 conflicts=()
 replaces=()
 backup=()
-source=(https://github.com/downloads/aericson/tinydconf/$pkgname-$pkgver.tar.gz)
-md5sums=('845f641774216c1e4307b298c8e2f4ca')
+source=(https://github.com/aericson/tinydconf/archive/master.zip)
+md5sums=('76f875a16c6c04df7d55e45a3dd2f386')
 options=(!emptydirs)
 
 package() {
-  cd "$srcdir/$pkgname-$pkgver"
+  cd "$srcdir/tinydconf-master"
   python2 setup.py install --root="$pkgdir/" --optimize=1
 }
