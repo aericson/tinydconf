@@ -1,7 +1,7 @@
 # Contributor: Andre Ericson <de.ericson@gmail.com>
 
 pkgname=python2-tinydconf
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="A wrapper around dconf client api"
 arch=('i686' 'x86_64')

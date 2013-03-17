@@ -4,11 +4,6 @@
 static PyObject *DConfTypeError;
 static DConfClient *client;
 
-
-void (*dconf_watch_func) (DConfClient *client, const gchar *path,
-                     const gchar *const *items, gint n_items,
-                     const gchar *tag, gpointer user_data);
-
 static PyObject *
 tinydconf_list(PyObject *self, PyObject *args)
 {
@@ -187,7 +182,8 @@ inittinydconf(void)
         return;
     
     g_type_init();
-    client = dconf_client_new(NULL, dconf_watch_func, NULL, NULL);
+    // client = dconf_client_new(NULL, dconf_watch_func, NULL, NULL);
+    client = dconf_client_new();
     
     DConfTypeError = PyErr_NewException("tinydconf.DConfTypeError", NULL, NULL);
     Py_INCREF(DConfTypeError);
